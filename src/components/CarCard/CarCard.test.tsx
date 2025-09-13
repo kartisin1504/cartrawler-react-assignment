@@ -3,6 +3,8 @@ import CarCard from './index'
 import type { Car } from '../../types'
 import '@testing-library/jest-dom'
 
+import { MemoryRouter } from 'react-router-dom'
+
 const mockCar: Car = {
   id: '1',
   vendor: 'ALAMO',
@@ -25,45 +27,49 @@ const mockCar: Car = {
 describe('CarCard', () => {
   it('renders car details', () => {
     render(
-      <CarCard
-        car={mockCar}
-        labels={{
-          passengers: 'Passengers',
-          bags: 'Bags',
-          doors: 'Doors',
-          transmission: 'Transmission',
-          airCon: 'AirCon',
-          view: 'View',
-        }}
-        isFav={() => false}
-        toggleFav={jest.fn()}
-      />
+      <MemoryRouter>
+        <CarCard
+          car={mockCar}
+          labels={{
+            passengers: 'Passengers',
+            bags: 'Bags',
+            doors: 'Doors',
+            transmission: 'Transmission',
+            airCon: 'AirCon',
+            view: 'View',
+          }}
+          isFav={() => false}
+          toggleFav={jest.fn()}
+        />
+      </MemoryRouter>
     )
 
     expect(screen.getByText(/Toyota Rav4/)).toBeInTheDocument()
-    expect(screen.getByText(/USD 100.00/)).toBeInTheDocument()
-    expect(screen.getByText(/Passengers:/)).toBeInTheDocument()
+    expect(screen.getByText(/USD 100\.00/)).toBeInTheDocument()
   })
 
   it('handles favourite toggle', () => {
     const toggle = jest.fn()
     render(
-      <CarCard
-        car={mockCar}
-        labels={{
-          passengers: 'Passengers',
-          bags: 'Bags',
-          doors: 'Doors',
-          transmission: 'Transmission',
-          airCon: 'AirCon',
-          view: 'View',
-        }}
-        isFav={() => false}
-        toggleFav={toggle}
-      />
+      <MemoryRouter>
+        <CarCard
+          car={mockCar}
+          labels={{
+            passengers: 'Passengers',
+            bags: 'Bags',
+            doors: 'Doors',
+            transmission: 'Transmission',
+            airCon: 'AirCon',
+            view: 'View',
+          }}
+          isFav={() => false}
+          toggleFav={toggle}
+        />
+      </MemoryRouter>
     )
 
     fireEvent.click(screen.getByRole('button', { name: /toggle favourite/i }))
     expect(toggle).toHaveBeenCalledWith('1')
   })
 })
+

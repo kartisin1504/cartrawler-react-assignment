@@ -457,9 +457,40 @@ h3 {
   .cabforce-card .view-btn { display: none; }
 }
 
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;z-index:50}
-.modal-card{background:#fff;border-radius:12px;max-width:560px;width:92%;padding:16px;border:1px solid #eee;box-shadow:0 12px 40px rgba(0,0,0,.18)}
-.modal-card header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.modal-card header button{border:1px solid #ddd;background:#fff;border-radius:8px;padding:4px 8px;cursor:pointer}
-.modal-card .rules p{margin:.4rem 0}
-.modal-card .rules ul{margin:.25rem 0 .5rem 1.1rem}
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:50
+}
+.modal-card{
+  background:#fff;
+  border-radius:12px;
+  max-width:560px;
+  width:92%;
+  padding:16px;
+  border:1px solid #eee;
+  box-shadow:0 12px 40px rgba(0,0,0,.18)
+}
+.modal-card header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:8px
+}
+.modal-card header button{
+  border:1px solid #ddd;
+  background:#fff;
+  border-radius:8px;
+  padding:4px 8px;
+  cursor:pointer
+}
+.modal-card .rules p{
+  margin:.4rem 0
+}
+.modal-card .rules ul{
+  margin:.25rem 0 .5rem 1.1rem
+}
