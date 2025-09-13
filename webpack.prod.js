@@ -10,6 +10,10 @@ module.exports = merge(common, {
     new CopyWebpackPlugin({
       patterns: [
         { from: path.resolve(__dirname, 'public/assets'), to: 'assets' },
+        // ✅ Copy root-level JSON files (like cars.json, fare-rules.json)
+        { from: path.resolve(__dirname, 'public/cars.json'), to: 'cars.json' },
+        { from: path.resolve(__dirname, 'public/fare-rules.json'), to: 'fare-rules.json' },
+
       ],
     }),
   ],

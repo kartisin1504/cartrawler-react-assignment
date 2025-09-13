@@ -31,7 +31,8 @@ npm run build
 .
 ├─ public/
 │  ├─ index.html
-│  ├─ cars.json               # optional local feed (offline fallback)
+│  ├─ cars.json  # optional local feed (offline fallback)
+   |- fare-rules.json                
 │  └─ assets/
 │     └─ icons/               # svg icons (vendor + UI)
 │        alamo.svg avis.svg hertz.svg partner.svg ...
@@ -45,26 +46,35 @@ npm run build
 │  │  │  └─ index.tsx         # composes the card
 │  │  ├─ FareRulesModal.tsx
 │  │  ├─ FiltersControls.tsx
+│  │  ├─ LanguageSelector.tsx
 │  │  ├─ Legend.tsx
 │  │  └─ SkeletonCard.tsx
 │  ├─ context/
 │  │  └─ I18nContext.tsx
-│  ├─ i18n/
-│  │  └─ index.ts             # dictionaries (en, es, hi)
+│  ├─ hooks/
+│  │  └─ useFavourites.ts
 │  ├─ pages/
-│  │  ├─ Home.tsx             # list + filters
 │  │  └─ CarPage.tsx          # details page
+│  │  ├─ Home.tsx             # list + filters
 │  ├─ styles/
 │  │  └─ global.css           # Tailored CSS + responsive rules
+│  ├─ App.tsx
+│  ├─ i18n.ts
+│  ├─ index.tsx
 │  ├─ types.ts
 │  ├─ utils.ts                # data helpers, fetch fallback, date fmt, logos, seat parsing
-│  ├─ App.tsx
 │  ├─ index.tsx
 │  └─ setupTests.ts           # jest-dom setup
 ├─ jest.config.js
 ├─ tsconfig.json
 ├─ package.json
 └─ README.md
+└─ tsconfig.json
+└─ vercel.json
+└─ webpack.common.js
+└─ webpack.dev.js
+└─ webpack.prod.js
+
 ```
 
 ---
