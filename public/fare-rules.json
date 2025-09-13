@@ -1,0 +1,16 @@
+{
+  "ALAMO:IFAR": {
+    "cancellation": { "freeUntilHours": 48, "feeAfter": "GBP 50" },
+    "changes": "Allowed before pickup; fare difference may apply.",
+    "fuelPolicy": "Full-to-full",
+    "mileage": { "limitPerDay": 200, "excessPerMile": "GBP 0.25" },
+    "deposit": "Credit card deposit GBP 200 at counter.",
+    "age": "Driver 25+; 21–24 surcharge GBP 15/day.",
+    "insurance": ["CDW included", "TP included", "Excess GBP 1,200"],
+    "extras": [{ "name": "Child seat", "price": "GBP 10/day" }]
+  },
+  "AVIS:FDAR": {
+    "cancellation": { "freeUntilHours": 24, "feeAfter": "GBP 35" },
+    "fuelPolicy": "Pre-purchase available"
+  }
+}

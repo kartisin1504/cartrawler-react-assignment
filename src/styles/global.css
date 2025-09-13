@@ -1,0 +1,465 @@
+:root {
+  --primary: #e6356f;
+  --text: #333333;
+  --grey: #efefef;
+  --container: #c7c7cd;
+  --white: #ffffff;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family:
+    'Open Sans',
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial;
+  color: var(--text);
+  background: #f7f7f7;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 8px 0 16px;
+}
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 24px 0 8px;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+.header {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.legend {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+.select {
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 1px solid var(--container);
+  background: #fff;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+.card {
+  grid-column: span 12;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #ededed;
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  align-items: center;
+}
+@media (min-width: 700px) {
+  .card {
+    grid-column: span 6;
+  }
+}
+.card .price {
+  margin-left: auto;
+  text-align: right;
+}
+.badge {
+  background: var(--grey);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+.btn {
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn-outline {
+  background: #fff;
+  border-color: var(--primary);
+  color: var(--primary);
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 6px;
+}
+.details div {
+  font-size: 12px;
+  color: #555;
+}
+.footer-note {
+  margin-top: 24px;
+  color: #666;
+  font-size: 12px;
+}
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+.skeleton {
+  position: relative;
+}
+.skeleton .sk-img {
+  width: 140px;
+  height: 90px;
+  background: #eee;
+  border-radius: 12px;
+  animation: pulse 1.2s infinite;
+}
+.skeleton .sk-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.skeleton .sk-line {
+  height: 12px;
+  background: #eee;
+  border-radius: 6px;
+  animation: pulse 1.2s infinite;
+}
+.skeleton .sk-line.short {
+  width: 60%;
+}
+.skeleton .sk-price {
+  width: 120px;
+  height: 24px;
+  background: #eee;
+  border-radius: 8px;
+  animation: pulse 1.2s infinite;
+  margin-left: auto;
+}
+.fav-btn {
+  background: #fff;
+  border: 1px solid var(--container);
+  border-radius: 999px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.fav-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.cabforce-card {
+  display: grid;
+  grid-template-columns: 160px 1fr 260px;
+  align-items: center;
+  gap: 16px;
+}
+.cabforce-card .card-media img {
+  width: 180px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.cabforce-card .card-body {
+  padding: 0 8px;
+}
+.cabforce-card .card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 8px;
+}
+.cabforce-card .vendor-logo {
+  height: 24px;
+}
+.cabforce-card .chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cabforce-card .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f2f2f2;
+  border: 1px solid #e5e5e5;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+.cabforce-card .chip img {
+  width: 14px;
+  height: 14px;
+}
+.cabforce-card .card-price {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  min-width: 220px;
+}
+.cabforce-card .card-price .amount {
+  font-size: 24px;
+  font-weight: 800;
+}
+.cabforce-card .card-price .note {
+  font-size: 12px;
+  color: #666;
+}
+.cabforce-card .card-price .cta-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.cabforce-card .card-price .view-btn {
+  min-width: 110px;
+}
+.cabforce-card .card-price .fullwidth {
+  width: 100%;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .cabforce-card {
+    grid-template-columns: 120px 1fr;
+  }
+  .cabforce-card .card-price {
+    grid-column: 1/-1;
+    align-items: stretch;
+  }
+  .cabforce-card .card-price .cta-row {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+/* Force the inner card layout to use tablet style at all widths */
+.cabforce-card {
+  grid-template-columns: 180px 1fr;
+}
+.cabforce-card .card-price {
+  grid-column: 1 / -1;
+  align-items: stretch;
+}
+.cabforce-card .card-price .cta-row {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Keep exactly 2 cards per row on large screens */
+@media (min-width: 1000px) {
+  .card {
+    grid-column: span 6;
+  } /* 12 cols / 6 = 2 cards per row */
+  .cabforce-card {
+    grid-column: span 6;
+  }
+}
+
+
+
+/* stack brand and controls vertically on very narrow screens */
+@media (max-width: 375px) {
+  .header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  
+}
+/* Controls: responsive grid */
+.controls {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+  align-items: end;
+}
+
+/* Each field is a column-stacked pair (label + select) */
+.controls .control {
+  grid-column: span 3;             /* 4 fields per row on wide screens */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Badge spans full width above filters */
+.controls .badge {
+  grid-column: 1 / -1;
+}
+
+/* Make selects fill available width */
+.controls .select {
+  width: 100%;
+}
+
+/* Tablet: 2 columns of controls */
+@media (max-width: 768px) {
+  .controls {
+    grid-template-columns: 1fr 1fr;
+  }
+  .controls .control {
+    grid-column: span 1;
+  }
+  .controls .badge {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Small phones: single column, compact sizing */
+@media (max-width: 375px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+  .controls .control,
+  .controls .badge {
+    grid-column: 1 / -1;
+  }
+  .controls label {
+    font-size: 12px;
+    color: #555;
+  }
+  .controls .select {
+    height: 36px;
+    font-size: 14px;
+    padding: 0 12px;
+    background-position: right 8px center; 
+    padding-right: 28px;                   
+  }
+}
+/* ===== small phones: ≤768px ===== */
+@media (max-width: 768px) {
+  /* Make the whole card flow top-to-bottom */
+  .cabforce-card {
+    display: block;           
+    padding: 12px;            
+  }
+
+  /* 1) Image full-width on top */
+  .cabforce-card .card-media img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;     
+    border-radius: 10px;
+  }
+
+  /* 2) Title + chips next */
+  .cabforce-card .card-body { padding: 8px 0 0; }
+  .cabforce-card .card-title {
+    gap: 8px;
+    margin: 8px 0;
+  }
+  .cabforce-card .vendor-logo { height: 20px; }
+  .cabforce-card .chip-row {
+    margin-top: 6px;
+    gap: 6px;
+  }
+  .cabforce-card .chip {
+    font-size: 11px;
+    padding: 5px 8px;
+    gap: 4px;
+  }
+  .cabforce-card .chip img { width: 12px; height: 12px; }
+
+  /* 3) Price + CTAs stacked at the bottom */
+  .cabforce-card .card-price {
+    margin-top: 12px;
+    align-items: stretch;        /* full width */
+    gap: 6px;
+  }
+  .cabforce-card .card-price .amount {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .cabforce-card .card-price .note {
+    font-size: 11px;
+  }
+  .cabforce-card .card-price .cta-row {
+    display: flex;
+    flex-direction: column;      
+    gap: 6px;
+  }
+  .cabforce-card .card-price .btn,
+  .cabforce-card .card-price .fullwidth,
+  .cabforce-card .card-price .view-btn {
+    width: 100%;
+    min-width: 0;               
+  }
+
+  /* If you want only a single "View" button on tiny screens, hide the inline one: */
+  .cabforce-card .view-btn { display: none; }
+}
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;z-index:50}
+.modal-card{background:#fff;border-radius:12px;max-width:560px;width:92%;padding:16px;border:1px solid #eee;box-shadow:0 12px 40px rgba(0,0,0,.18)}
+.modal-card header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.modal-card header button{border:1px solid #ddd;background:#fff;border-radius:8px;padding:4px 8px;cursor:pointer}
+.modal-card .rules p{margin:.4rem 0}
+.modal-card .rules ul{margin:.25rem 0 .5rem 1.1rem}

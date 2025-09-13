@@ -1,0 +1,1 @@
+module.exports={env:{browser:true,es2022:true,jest:true},settings:{react:{version:'detect'}},extends:['eslint:recommended','plugin:react/recommended'],parserOptions:{ecmaVersion:'latest',sourceType:'module'},plugins:['react','react-hooks'],rules:{'react/react-in-jsx-scope':'off','react/prop-types':'off'}}

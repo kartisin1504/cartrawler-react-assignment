@@ -1,0 +1,1 @@
+module.exports={testEnvironment:'jsdom',transform:{'^.+\\.(t|j)sx?$':'babel-jest'},moduleNameMapper:{'\\.(css)$':'<rootDir>/test/__mocks__/styleMock.js','\\.(svg|png|jpg|jpeg|gif)$':'<rootDir>/test/__mocks__/fileMock.js'},setupFilesAfterEnv:['@testing-library/jest-dom']}
