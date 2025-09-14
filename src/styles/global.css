@@ -494,3 +494,10 @@ h3 {
 .modal-card .rules ul{
   margin:.25rem 0 .5rem 1.1rem
 }
+.vendor-name {
+  display: block;
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 4px;
+  text-align: center;
+}
