@@ -38,7 +38,7 @@ function AppInner() {
         <p className="footer-note">
           <img
             style={{ width: 120, height: 20 }}
-            src="https://corporate.cartrawler.com/wp-content/uploads/2021/12/ct-logo-dark.svg"
+            src="/assets/ct-logo-dark.svg"
             alt="CarTrawler"
           />
           <div>Driving successful partnerships</div>
